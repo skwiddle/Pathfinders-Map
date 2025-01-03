@@ -12,7 +12,9 @@ body {
 h1 {
     color: #333;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;   /* Reduces the space at the top of the text */
+    padding: 0;         /* Removes any extra padding */
+    opacity: 0.5;       /* Makes the title half-transparent */
 }
 
 /* Style for the paragraph */
