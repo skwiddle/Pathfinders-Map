@@ -1,47 +1,51 @@
 /* General body styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #4B5320; /* Corrected olive background color */
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Centers content vertically */
-    flex-direction: column; /* Ensures stacking of content */
+    color: #333;  /* Dark text color for readability */
 }
 
-/* Title and logo container */
+/* Style for the heading (title) */
 h1 {
-    text-align: center;
-    color: black;
-    font-size: 36px;
-    margin-top: 40px;
-    font-weight: bold;
-    position: relative; /* To allow for the border and the logos */
-    padding: 10px 20px;
-    border: 3px solid black; /* Adds the black border around the title */
-    border-radius: 8px; /* Rounds the edges */
-    background-color: white; /* White background inside the border */
-    display: inline-block; /* Ensures the border wraps tightly around the text */
+    color: #fff;                              /* White text */
+    text-align: center;                        /* Center align the title */
+    margin-top: 20px;                          /* Reduce space above the title */
+    padding: 10px 30px;                        /* Smaller padding around the title */
+    background-color: #3E4A36;                 /* Darker olive-camo color */
+    border-radius: 5px;                        /* Rounded corners for the background */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    font-size: 1.8em;                          /* Smaller font size */
+    text-transform: uppercase;                 /* Uppercase text for a bolder look */
+    letter-spacing: 1px;                       /* Spacing between letters for clarity */
 }
 
-/* Add custom logos to both sides of the title */
-#logo-left, #logo-right {
-    width: 50px;
-    height: auto;
-    vertical-align: middle;
-    margin-left: 10px;
-    margin-right: 10px;
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;  /* Smaller font size on mobile */
+        padding: 8px 20px; /* Adjust padding for smaller screens */
+    }
 }
 
 /* Style for the map container */
 #map {
-    height: 1200px;
-    width: 100%;
-    background-color: #fff; /* White background inside the map container */
+    height: 600px; /* Map height */
+    width: 100%;   /* Full width of the page */
+    border-top: 3px solid #333;  /* Add a border at the top of the map for style */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Add subtle shadow around the map */
 }
+
+/* Additional styles for paragraphs or any text (if needed) */
+p {
+    font-size: 18px;
+    color: #555;  /* Light gray text color for content */
+    text-align: center;
+    margin-top: 20px; /* Space below title */
+    line-height: 1.6;  /* Increased line height for readability */
+}
+
 
 /* Style for the legend */
 #legend {

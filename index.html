@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pathfinders Interactive Map</title>
+    <title>Pathfinders Campaign Map</title>
     
     <!-- Link to Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -11,46 +11,22 @@
     <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css">
     
-    <!-- Link to font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
     <style>
-        /* General body styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #4B5320; /* Corrected olive background color */
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        /* Style for the title and logo */
-        h1 {
-            text-align: center;
-            color: black;
-            font-size: 36px;
-            margin-top: 40px;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-        }
-
-        /* Add custom logos to both sides of the title */
-        #logo-left, #logo-right {
-            width: 50px;
-            height: auto;
-            vertical-align: middle;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        /* Style for the map container */
+        /* Ensures that the map div takes up full width and height */
         #map {
-            height: 1200px;
-            width: 100%;
-            background-color: #fff; /* White background inside the map container */
+            height: 1200px; /* Adjust map height as needed */
+            width: 100%; /* Takes up full width of the page */
         }
 
-        /* Style for the legend */
+        /* Adjust the title's margin and padding */
+        h1 {
+            margin: 10px;  /* Adjust the outer space */
+            padding: 0;    /* Remove internal space */
+            text-align: center; /* Optional: Center-align the title */
+        }
+
+
+/* Style for the legend */
         #legend {
             position: fixed;
             top: 150px; /* Adjusted to give more space from the top */
@@ -91,18 +67,17 @@
             width: 30px;
             height: 5px;
         }
+
     </style>
 </head>
 <body>
 
-    <!-- Title with custom logos on both sides -->
-    <h1><img id="logo-left" src="pathfinders-logo.jpg" alt="Logo">Pathfinders Interactive Map<img id="logo-right" src="pathfinders-logo.jpg" alt="Logo"></h1>
+    <h1>Pathfinders Campaign Map</h1>
     
     <!-- Div for the map -->
     <div id="map"></div>
 
-    <!-- Legend Container -->
-    <div id="legend">
+<div id="legend">
         <h3>Map Legend</h3>
         <ul>
             <!-- Friendly Territory -->
@@ -125,6 +100,9 @@
             <li><span class="legend-line" style="background-color: red;"></span> Enemy Patrol Route</li>
         </ul>
     </div>
+
+
+
 
     <!-- Link to Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
