@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everon Interactive Map</title>
+    
+    <!-- Link to Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Ensures that the map div takes up full width and height */
+        #map {
+            height: 600px; /* Adjust map height as needed */
+            width: 100%; /* Takes up full width of the page */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Everon Interactive Map</h1>
+    
+    <!-- Div for the map -->
+    <div id="map"></div>
+
+    <!-- Link to Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map', {
+            crs: L.CRS.Simple, // Simple coordinate system for images
+            minZoom: -2,
+            maxZoom: 2
+        });
+
+        // Define the map's image bounds (8000x8000 pixels)
+        var bounds = [[0, 0], [8000, 8000]]; // Update to match the image size (8000x8000)
+        
+        // Add the image overlay
+        var image = L.imageOverlay('everon-map.jpg', bounds).addTo(map);
+        map.fitBounds(bounds); // Fits map to the image
+    </script>
+    
+</body>
+</html>
